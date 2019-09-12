@@ -1,0 +1,56 @@
+
+{
+    "meta":
+        {
+
+            "Model"   :"Mean-Max Attention Autoencoder",
+            "Corpus"  :"MIMICIII"
+        },
+
+    "path":
+        {
+            "train"  : "%s/data/corpus/my_train_tot_new.txt",
+            "valid"  : "%s/data/corpus/my_valid_tot_new.txt",
+            "decode" : "%s/data/corpus/my_test_tot_new.txt",
+            "vocab"  : "%s/data/corpus/my.vocab",
+            "w2v"    : "%s/data/dem_dice_embedding.txt",
+            "w2v_2"  : "%s/data/lab_dice_embedding.txt",
+	    "w2v_3"  : "%s/data/notes_dice_embedding.txt",
+            "tasks"  : "%s/data/senteval_data/",
+            "models" : "%s/models/"
+        },
+    
+    "option":
+        {
+            "is_training" : true,
+            "model"       : "Mean-Max-AAE",
+            
+            "word_freq" : 1000,
+            "vocab_size": 1968,
+            "maxlen"    : 32,
+            "minlen"    : 4,
+           
+            "position"  : "emb",
+            "dim_word"  : 16,
+            "dim_model" : 250,
+            "head"      : 5,
+            "dim_inner" : 500,
+            "layer_n"   : 3,
+            
+            "clip_grad" : 5.0,
+            "drop_rate" : 0.5,
+            "lrate"     : 0.001,
+            "optimizer" : "adam",
+            "batch_size": 64,
+            "decode_bs" : 96,
+            "encode_bs" : 96,
+            
+            "dispFreq"   : 100,
+            "summaryFreq": 100,
+            "validFreq"  : 500,
+            "decodeFreq" : 1000,
+            "saveFreq"   : 1000,
+            "finish"     : 100000
+        }
+}
+
