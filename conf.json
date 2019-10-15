@@ -31,7 +31,7 @@
             "minlen"    : 4,
            
             "position"  : "emb",
-            "dim_word"  : 16,
+            "dim_word"  : 500,
             "dim_model" : 250,
             "head"      : 5,
             "dim_inner" : 500,
